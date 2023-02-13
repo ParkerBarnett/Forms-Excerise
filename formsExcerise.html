@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the forms exercise">
+    <meta name="author" content="Parker Barnett">
+    <title>Forms Exercise</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Customer Experience Survey</legend>
+            <label for="storeNumber">Store Number</label>
+            <select name="storeNumber" id="storeNumber">
+                <option hidden>Select a Store</option>
+                <option value="3109">3109</option>
+                <option value="2421">2421</option>
+                <option value="5357">5357</option>
+            </select>
+            <fieldset>
+                <legend>When you visited:</legend>
+                <div>
+                <label for="dateVisited">Date Visited:</label>
+                <input type="date" name="dateVisited" id="dateVisited" value="2023-03-01" min="2022-02-09" max="2023-02-09">
+                </div>
+                
+                <div>
+                <label for="timeVisited">Time</label>
+                <input type="time" name="timeVisited" id="timeVisited"
+                value="12:30">
+                </div>
+            </fieldset>
+
+            <label for="fullName">Full Name</label>
+            <input type="text" name="fullName" id="fullName"
+            placeholder="Name">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email"
+            placeholder="Email">
+
+            <fieldset>
+                <legend>How would you rate your level of satisfaction with your visit?</legend>
+                <input type="radio" name="radioLink" id="one">
+                <label for="one">Satisfied</label>
+                <br>
+                <input type="radio" name="radioLink" id="two" checked>
+                <label for="two">Neither Satisfied Nor Dissatisfied</label>
+                <br>
+                <input type="radio" name="radioLink" id="three">
+                <label for="three">Dissatisfied</label>
+            </fieldset>
+
+            <label for="experience">Tell us about your experience</label>
+            <br>
+            <textarea name="experience" id="experience" cols="20" rows="2"></textarea>
+            <br>
+            <label for="times">Times visited last month:</label>
+            <br>
+            <input type="number" name="times" id="times" min="1" max="30">
+            <br>
+            <input type="checkbox" name="contact" id="contact" required>
+            <label for="contact">Please check the box if you would be willing to be contacted about your experience.</label>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" pattern="(.{5,10})" title="Please enter a password that is 5 to 10 characters">
+            <br>
+            <input type="reset">
+            <input type="submit">
+    </fieldset>
+    </form>
+</body>
+</html>
